@@ -58,7 +58,7 @@ if(isset($_POST['more'])){
 
   
   $sql="INSERT INTO shalom3(ticketnumber,invno,company,fullname,destination,issuedate,fare,ar,ap,vendorcom,shalomcom,bank)".
-  "VALUES ('$ticketnumber','$invno','$company','$fullname','$destination','$issuedate','$fare','$ar','$ap','$vendorcom','$shalomcom','$bank')";
+  "VALUES ('$ticketnumber','$invno','$company','$fullname','$destination','$issuedate','$fare','$ar','$ap','$vendorcom','$shalomcom,'$bank')";
   $result=mysqli_query($con,$sql);
   
   if($result){
@@ -212,7 +212,7 @@ img
 
             <div class="mb-3">
             <label >Shalom Comm</label>
-            <input type="text" class="form-control" placeholder="Shalom Comm" name="shalomcom"required="true">
+            <input type="text" class="form-control" placeholder="Shalom Comm" name="shalomcom">
 
             </div>
 
