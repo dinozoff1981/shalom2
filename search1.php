@@ -70,7 +70,7 @@ h2
                                     {
                                         $fullname = $_GET['fullname'];
 
-                                        $query = "SELECT * FROM shalom3 WHERE fullname='$fullname' ";
+                                        $query = "SELECT * FROM shalom4 WHERE fullname='$fullname' ";
                                         $query_run = mysqli_query($con, $query);
 
                                         if(mysqli_num_rows($query_run) > 0)

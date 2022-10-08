@@ -142,7 +142,7 @@ img
                 <?php
                 include 'connect.php';
                 
-                $sql="SELECT * FROM shalom3";
+                $sql="SELECT * FROM shalom4";
                 $result=mysqli_query($con,$sql);
 
                 if($result){

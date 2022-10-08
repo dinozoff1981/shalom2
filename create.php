@@ -25,7 +25,7 @@ $bank=$_POST['bank'];
 
 
 
-$sql="INSERT INTO shalom3(ticketnumber,invno,company,fullname,destination,issuedate,fare,ar,ap,vendorcom,shalomcom,bank)".
+$sql="INSERT INTO shalom4(ticketnumber,invno,company,fullname,destination,issuedate,fare,ar,ap,vendorcom,shalomcom,bank)".
 "VALUES ('$ticketnumber','$invno','$company','$fullname','$destination','$issuedate','$fare','$ar','$ap','$vendorcom','$shalomcom','$bank')";
 $result=mysqli_query($con,$sql);
 
@@ -57,7 +57,7 @@ if(isset($_POST['more'])){
   
 
   
-  $sql="INSERT INTO shalom3(ticketnumber,invno,company,fullname,destination,issuedate,fare,ar,ap,vendorcom,shalomcom,bank)".
+  $sql="INSERT INTO shalom4(ticketnumber,invno,company,fullname,destination,issuedate,fare,ar,ap,vendorcom,shalomcom,bank)".
   "VALUES ('$ticketnumber','$invno','$company','$fullname','$destination','$issuedate','$fare','$ar','$ap','$vendorcom','$shalomcom,'$bank')";
   $result=mysqli_query($con,$sql);
   
