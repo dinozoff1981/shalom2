@@ -96,7 +96,13 @@ img
 
    <h2>Shalom Travel</h2>
 <div class="topnav">
-   <tr>
+  
+
+</div>
+    <div class="container">
+
+
+    <tr>
 
 <td>
 <button class="btn btn-primary btn-sm"><a href="search.php" class="text-light">Find By Ticket #</a></button>
@@ -106,8 +112,7 @@ img
 </td>
 </tr>
 
-</div>
-    <div class="container">
+
         <button class="btn btn-primary my-5 btn-sm"><a href="create.php" class="text-light">ADD A CUSTOMER</a></button>
 
 
