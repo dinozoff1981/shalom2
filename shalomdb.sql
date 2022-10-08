@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `shalom2`
 --
 
-CREATE TABLE `shalom2` (
+CREATE TABLE `shalom3` (
   `ticketnumber` varchar(100) NOT NULL,
   `invno` varchar(100) NOT NULL,
   `company` text NOT NULL,
