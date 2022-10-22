@@ -14,7 +14,7 @@ $fare=$_POST['fare'];
 $ar=$_POST['ar'];
 $ap=$_POST['ap'];
 $vendorcom=$_POST['vendorcom'];
-$shalomcom=$_POST['shalomcom'];
+
 $bank=$_POST['bank'];
 
 
@@ -25,9 +25,12 @@ $bank=$_POST['bank'];
 
 
 
-$sql="INSERT INTO shalom4(ticketnumber,invno,company,fullname,destination,issuedate,fare,ar,ap,vendorcom,shalomcom,bank)".
-"VALUES ('$ticketnumber','$invno','$company','$fullname','$destination','$issuedate','$fare','$ar','$ap','$vendorcom','$shalomcom','$bank')";
-$result=mysqli_query($con,$sql);
+
+$sql="INSERT INTO shalom3(ticketnumber,invno,company,fullname,destination,issuedate,fare,ar,ap,vendorcom,bank)".
+  "VALUES ('$ticketnumber','$invno','$company','$fullname','$destination','$issuedate','$fare','$ar','$ap','$vendorcom','$bank')";
+  $result=mysqli_query($connect,$sql);
+  
+
 
 if($result){
 
@@ -52,21 +55,23 @@ if(isset($_POST['more'])){
   $ar=$_POST['ar'];
   $ap=$_POST['ap'];
   $vendorcom=$_POST['vendorcom'];
-  $shalomcom=$_POST['shalomcom'];
+  
   $bank=$_POST['bank'];
   
-
+ 
   
-  $sql="INSERT INTO shalom4(ticketnumber,invno,company,fullname,destination,issuedate,fare,ar,ap,vendorcom,shalomcom,bank)".
-  "VALUES ('$ticketnumber','$invno','$company','$fullname','$destination','$issuedate','$fare','$ar','$ap','$vendorcom','$shalomcom,'$bank')";
-  $result=mysqli_query($con,$sql);
+  
+
+  $sql="INSERT INTO shalom3(ticketnumber,invno,company,fullname,destination,issuedate,fare,ar,ap,vendorcom,bank)".
+  "VALUES ('$ticketnumber','$invno','$company','$fullname','$destination','$issuedate','$fare','$ar','$ap','$vendorcom','$bank')";
+  $result=mysqli_query($connect,$sql);
   
   if($result){
   
     header('location:create.php');
   }else{
   
-    die(mysqli_error($con));
+    die(mysqli_error($connect));
   }
   
   
@@ -193,6 +198,7 @@ img
 
             </div>
             
+            
         
 
 
@@ -210,11 +216,7 @@ img
                                 </select>
                             </div>
 
-            <div class="mb-3">
-            <label >Shalom Comm</label>
-            <input type="text" class="form-control" placeholder="Shalom Comm" name="shalomcom">
-
-            </div>
+            
 
             
             

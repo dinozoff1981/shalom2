@@ -9,6 +9,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
 
     <title>Shalom Travel</title>
 
@@ -29,10 +36,7 @@
     {
 
      background-color: white;
-     
 
-
-        
     }
 
 h2
@@ -105,9 +109,8 @@ img
     <tr>
 
 <td>
-<button class="btn btn-primary btn-sm"><a href="search.php" class="text-light">Find By Ticket #</a></button>
-<button class="btn btn-primary btn-sm"><a href="search1.php" class="text-light">Find By Name</a></button>
-<button class="btn btn-primary btn-sm"><a href="#" class="text-light">Find By Company</a></button>
+
+<button class="btn btn-primary btn-sm"><a href="report.php" class="text-light">REPORT</a></button>
 
 </td>
 </tr>
@@ -142,8 +145,9 @@ img
                 <?php
                 include 'connect.php';
                 
-                $sql="SELECT * FROM shalom4";
-                $result=mysqli_query($con,$sql);
+                $sql="SELECT * FROM shalom3";
+                $result=mysqli_query($connect,$sql);
+                
 
                 if($result){
 
@@ -162,8 +166,9 @@ img
                             $ar=$row['ar'];
                             $ap=$row['ap'];
                             $vendorcom=$row['vendorcom'];
-                            $shalomcom=$row['shalomcom'];
+                          
                             $bank=$row['bank'];
+                        
                           
                            
                           
@@ -179,7 +184,7 @@ img
                             <td>'.$ar.'</td>
                             <td>'.$ap.'</td>
                             <td>'.$vendorcom.'</td>
-                            <td>'.$shalomcom.'</td>
+                           
                             <td>'.$bank.'</td>
                            
                             
@@ -206,6 +211,16 @@ img
 
 
             </tbody>
+
+            <tfoot>
+          <tr>
+            <th colspan="3">Total</th>
+            <th id="total_order"></th>
+            <th id="test_order"></th>
+          </tr>
+        </tfoot>
+
+
         </table> 
 
     </div>
@@ -213,7 +228,9 @@ img
     <div class="container">
         <button class="btn btn-danger my-5"><a href="logout.php" class="text-light">Log Out</a></button>
 
-
+    
 </body>
 
 </html>
+
+

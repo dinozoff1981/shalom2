@@ -5,8 +5,8 @@ $ticketnumber=$_GET['updateid'];
 
 
 
-$sql="SELECT * FROM shalom4 WHERE ticketnumber=$ticketnumber";
-$result=mysqli_query($con,$sql);
+$sql="SELECT * FROM shalom3 WHERE ticketnumber=$ticketnumber";
+$result=mysqli_query($connect,$sql);
 $row=mysqli_fetch_assoc($result);
 
 
@@ -38,9 +38,9 @@ if(isset($_POST['submit'])){
     $shalomcom=$_POST['shalomcom'];
     $bank=$_POST['bank'];
 
-$sql="UPDATE shalom4 SET ticketnumber=$ticketnumber,ticketnumber='$ticketnumber', invno='$invno',company='$company',fullname='$fullname',destination='$destination',issuedate='$issuedate',fare='$fare',ar='$ar',ap='$ap',vendorcom='$vendorcom',shalomcom='$shalomcom',bank='$bank' WHERE ticketnumber=$ticketnumber";
+$sql="UPDATE shalom3 SET ticketnumber=$ticketnumber,ticketnumber='$ticketnumber', invno='$invno',company='$company',fullname='$fullname',destination='$destination',issuedate='$issuedate',fare='$fare',ar='$ar',ap='$ap',vendorcom='$vendorcom',shalomcom='$shalomcom',bank='$bank' WHERE ticketnumber=$ticketnumber";
 
-$result=mysqli_query($con,$sql);
+$result=mysqli_query($connect,$sql);
 
 if($result){
  
